@@ -4,7 +4,7 @@
 #### Documentação
   * https://github.com/recuperarxml/recuperarxml.com.br/wiki
 
-### Licenças
+#### Licenças
   * [jQuery](http://www.jquery.org). Licença http://www.jquery.org/license
   * [Bootstrap](http://getbootstrap.com). Licença MIT.
   * [simple-hint.js](https://github.com/catc). Copyright (c) 2014 Catalin Covic.
