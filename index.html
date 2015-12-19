@@ -15,22 +15,30 @@
     <link rel="alternate" href="http://www.recuperarxml.com.br" hreflang="pt-br" />
     <title>RecuperarXML da NF-e e NFC-e</title>
 
-    <!-- Typed CSS -->
-    <link href="../ext/css/typed.css" rel="stylesheet">
-
-    <!-- Hint CSS -->
-    <link href="../ext/css/simple-hint.min.css" rel="stylesheet" />
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../ext/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../ext/css/recuperarxml.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../ext/css/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./ext/css/introLoader.min.css" rel="stylesheet">
+    <link href="./ext/css/typed.css" rel="stylesheet">
+    <link href="./ext/css/simple-hint.min.css" rel="stylesheet">
+    <link href="./ext/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./ext/css/recuperarxml.css" rel="stylesheet">
+    <link href="./ext/css/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <script src="./ext/js/jquery.introLoader.pack.min.js"></script>
+    <script src="./ext/js/jquery-1.11.0.js"></script>
+    <script src="./ext/js/bootstrap.min.js"></script>
+    <script src="./ext/js/jquery.easing.min.js"></script>
+    <script src="./ext/js/jquery.typed.js"></script>
+    <script src="./ext/js/clipboard.min.js"></script>
+    <script src="./ext/js/jquery.introLoader.pack.min.js"></script>
+    <script src="./ext/js/recuperarxml.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#load").introLoader();
+      });
+    </script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,6 +50,8 @@
   </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div id="load" class="introLoading"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -117,7 +127,11 @@
         <div class="col-lg-8 col-lg-offset-2">
           <br /><br /><br /><br />
           <h2>O QUE FAZ</h2>
-          <br />
+
+          <br /><br /><br /><br />
+          <iframe height="360" width="100%" src="https://www.youtube.com/embed/OFT0gKPgsHY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          <br /><br /><br /><br />
           <p class="center">
           	O RecuperarXML faz a recuperação do arquivo XML da Nota Fiscal Eletrônica (NF-e) e da Nota Fiscal de Consumidor Eletrônica (NFC-e). 
           </p>
@@ -166,7 +180,7 @@
                 <li><p class="left">O único software do Brasil a realizar o download da NFC-e.</p></li>
                 <li>
                   <p class="left">Instalação do software no computador e utilização de recursos da nuvem 
-                    <a target="_blank" title="Amazon Web Services" href="https://aws.amazon.com"><img alt="Amazon Web Services" title="Amazon Web Services" src="../ext/img/aws.png" width="105" height="39" />
+                    <a target="_blank" title="Amazon Web Services" href="https://aws.amazon.com"><img alt="Amazon Web Services" title="Amazon Web Services" src="./ext/img/aws.png" width="105" height="39" />
                     </a>
                   </p>
                 </li>
@@ -426,7 +440,7 @@
                 
               <p class="center">
                 <a href="http://www.recuperarxml.com.br/download/InstaladorRecuperarXML.exe" class="btn btn-install btn-lg hint-top" data-hint="Clique na imagem para realizar o download do Instalador">
-                  <img src="../ext/img/down.png" alt="Download" width="120" heigth="120">
+                  <img src="./ext/img/down.png" alt="Download" width="120" heigth="120">
                 </a>
               </p>
 
@@ -457,7 +471,7 @@
         
             <tr class="danger">
               <td>
-                Plano 1
+                <b>Plano 1</b>
               </td>
             </tr>
 
@@ -508,7 +522,7 @@
 
             <tr class="danger">
               <td>               
-                  Plano 2
+                  <b>Plano 2</b>
               </td>
             </tr>
 
@@ -567,7 +581,7 @@
               <p>
                 <input id="emailcopy" readonly="readonly" value="recuperarxml@gmail.com">
                 <button class="btn hint-top" data-hint="Copiar e-mail" data-clipboard-target="#emailcopy">
-                  <img src="../ext/img/clippy.svg" width="20">
+                  <img src="./ext/img/clippy.svg" width="20">
                 </button>
               </p>
     
@@ -597,29 +611,11 @@
             <a href="https://github.com/recuperarxml/recuperarxml.com.br/wiki/Termos" target="_blank" title="Termos de uso do RecuperarXML"><u>Termos de uso</u>
             </a><br />
             © 2015 <a class="page-scroll" href="#intro">
-    		<img alt="RecuperarXML" title="Ir para o topo do site" src="../ext/img/up.png" width="24" height="24"></a>
+    		<img alt="RecuperarXML" title="Ir para o topo do site" src="./ext/img/up.png" width="24" height="24"></a>
     		Todos os direitos reservados.
      	</p>
       </div>
     </footer>
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="../ext/js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../ext/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="../ext/js/jquery.easing.min.js"></script>
-
-    <!-- Plugin Typed JavaScript -->
-    <script src="../ext/js/jquery.typed.js"></script>
-
-    <!-- Plugin clipboard JavaScript -->
-    <script src="../ext/js/clipboard.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../ext/js/recuperarxml.js"></script>
 
     <script>
       $("#owntip").typed({
