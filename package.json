@@ -1,0 +1,27 @@
+{
+  "name": "recuperarxml.com.br",
+  "version": "1.0.0",
+  "description": "Site RecuperarXML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RecuperarXML/recuperarxml.com.br.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RecuperarXML/recuperarxml.com.br/issues"
+  },
+  "homepage": "https://github.com/RecuperarXML/recuperarxml.com.br#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-ftp": "^1.1.0",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7"
+  }
+}
