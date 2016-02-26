@@ -3,7 +3,6 @@ var cssnano = require('gulp-cssnano');
 var gutil   = require('gulp-util');
 var uglify  = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
-var ftp     = require('gulp-ftp');
 
 gulp.task('rx', function() {
     
