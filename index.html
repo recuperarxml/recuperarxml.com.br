@@ -16,7 +16,6 @@
     <title>RecuperarXML da NF-e e NFC-e</title>
 
     <link href="./ext/css/introLoader.min.css" rel="stylesheet">
-    <link href="./ext/css/typed.css" rel="stylesheet">
     <link href="./ext/css/simple-hint.min.css" rel="stylesheet">
     <link href="./ext/css/bootstrap.min.css" rel="stylesheet">
     <link href="./ext/css/recuperarxml.css" rel="stylesheet">
@@ -24,13 +23,11 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <script src="./ext/js/jquery.introLoader.pack.min.js"></script>
     <script src="./ext/js/jquery-1.11.0.js"></script>
     <script src="./ext/js/bootstrap.min.js"></script>
     <script src="./ext/js/jquery.easing.min.js"></script>
-    <script src="./ext/js/jquery.typed.js"></script>
-    <script src="./ext/js/clipboard.min.js"></script>
     <script src="./ext/js/jquery.introLoader.pack.min.js"></script>
+    <script src="./ext/js/clipboard.min.js"></script>
     <script src="./ext/js/recuperarxml.js"></script>
 
     <script>
@@ -38,7 +35,12 @@
         $("#load").introLoader();
       });
     </script>
-
+    
+    <script type="text/javascript">
+      window.onload = function(){
+        ocultar();
+      };
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -99,7 +101,6 @@
     <!-- Intro Header -->
     <header id="intro" class="intro">
       <div class="intro-body">
-
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -108,9 +109,11 @@
           </div>
         </div>
 
-        <h2>
-          <span id="owntip"></span>
-        </h2>
+        <div class="container">
+          <div class="row">
+             <h2 class="intro-text">Software para recuperar arquivos XML da NF-e e NFC-e.</h2>
+          </div>
+        </div>
 
         <div class="container">
           <div class="row">
@@ -130,9 +133,6 @@
         <div class="col-lg-8 col-lg-offset-2">
           <br /><br /><br /><br />
           <h2>O QUE FAZ</h2>
-
-          <br /><br /><br /><br />
-          <iframe height="360" width="100%" src="https://www.youtube.com/embed/OFT0gKPgsHY?rel=0" frameborder="0" allowfullscreen></iframe>
 
           <br /><br /><br /><br />
           <p class="center">
@@ -560,30 +560,98 @@
         <div class="col-lg-8 col-lg-offset-2">
          <br /><br /><br /><br />
          <h2>PERGUNTAS FREQUENTES</h2>
+         <br /><br />
 
-         <ul class="columnbox">
-          <li><p class="left"><u>Posso contratar o sistema somente por um mês?</u><br />Sim. A sistema funcionará durante o período de um mês e não funcionará após isso. A renovação não é automática e não é obrigatória.</p></li>
+         <a class="question" onclick="toggle('ocultar1');">
+          <h3>Posso contratar o sistema somente por um mês?</h3>
+         </a>
+         <div id="ocultar1">
+          <p class="left">
+            Sim. A sistema funcionará durante o período de um mês e não funcionará após isso. A renovação não é automática e não é obrigatória.
+          </p>
+         </div>
 
-					<li><p class="left"><u>Quais os planos disponíveis para aquisição?</u><br />Existem somente dois planos disponíveis. Plano com captcha para todos os Estados do Brasil e o outro plano sem captcha somente para NFC-e do Paraná e sob demanda.</p></li>
+         <a class="question" onclick="toggle('ocultar2');">
+          <h3>Quais os planos disponíveis para aquisição?</h3>
+         </a>
+         <div id="ocultar2">
+            <p class="left">
+              Existem somente dois planos disponíveis. Plano com captcha para todos os Estados do Brasil e o outro plano sem captcha somente para NFC-e do Paraná e sob demanda.
+            </p>
+         </div>
 
-          <li><p class="left"><u>O que significa a palavra "captcha"?</u><br />"Captchas" são as imagens distorcidas que devemos digitar a cada download de uma chave de acesso.</p></li>
+         <a class="question" onclick="toggle('ocultar3');">
+          <h3>O que significa a palavra "captcha"?</h3>
+         </a>
+         <div id="ocultar3">
+            <p class="left">
+              "Captchas" são as imagens distorcidas que devemos digitar a cada download de uma chave de acesso.
+            </p>
+         </div>
 
-          <li><p class="left"><u>Existe a possibilidade do sistema fazer a leitura automática das imagens (captchas)?</u><br />Não. Essas imagens são geradas pelas Secretarias de Fazenda de cada Estado e não podem ser lidas automaticamente. É uma política de segurança do próprio órgão governamental que não infringimos.</p></li>
+         <a class="question" onclick="toggle('ocultar4');">
+          <h3>Existe a possibilidade do sistema fazer a leitura automática das imagens (captchas)?</h3>
+         </a>
+         <div id="ocultar4">
+          <p class="left">
+            Não. Essas imagens são geradas pelas Secretarias de Fazenda de cada Estado e não podem ser lidas automaticamente. É uma política de segurança do próprio órgão governamental que não infringimos.
+          </p>
+         </div>
 
-          <li><p class="left"><u>Quais são as formas de pagamento disponíveis?</u><br />Utilizamos exclusivamente o PagSeguro como intermediador dos pagamentos. O PagSeguro oferece pagamentos por cartões de crédito e débito de diversas operadoras, boletos bancários e parcelamento em várias vezes.</p></li>
+         <a class="question" onclick="toggle('ocultar5');">
+          <h3>Quais são as formas de pagamento disponíveis?</h3>
+         </a>
+         <div id="ocultar5">
+          <p class="left">
+            Utilizamos exclusivamente o PagSeguro como intermediador dos pagamentos. O PagSeguro oferece pagamentos por cartões de crédito e débito de diversas operadoras, boletos bancários e parcelamento em várias vezes.
+          </p>
+         </div>
 
-          <li><p class="left"><u>Fiz o pagamento do plano e como é a forma de liberação do sistema?</u><br />Realizado o pagamento com cartão de crédito ou débito o PagSeguro nos informa imediatamente e a liberação do sistema também ocorre imediatamente.<br />Realizado o pagamento com boleto o PagSeguro nos informa do pagamento somente no próximo dia útil, portanto, somente após a confirmação pelo PagSeguro poderemos liberá-lo. Em caso de urgência nos envie por e-mail a cópia do comprovante de pagamento que liberaremos imediatamente.</p></li>
+         <a class="question" onclick="toggle('ocultar6');">
+          <h3>Fiz o pagamento do plano e como é a forma de liberação do sistema?</h3>
+         </a>
+         <div id="ocultar6">
+          <p class="left">
+            Realizado o pagamento com cartão de crédito ou débito o PagSeguro nos informa imediatamente e a liberação do sistema também ocorre imediatamente.<br />Realizado o pagamento com boleto o PagSeguro nos informa do pagamento somente no próximo dia útil, portanto, somente após a confirmação pelo PagSeguro poderemos liberá-lo. Em caso de urgência nos envie por e-mail a cópia do comprovante de pagamento que liberaremos imediatamente.
+          </p>
+         </div>
 
-          <li><p class="left"><u>Caso encontre um problema no sistema ou quero sugerir algo como entro em contato?</u><br />Nosso canal de comunicação é essencialmete pelo e-mail recuperarxml@gmail.com para que nossa comunicação fique sempre registrada.</p></li> 
+         <a class="question" onclick="toggle('ocultar7');">
+          <h3>Caso encontre um problema no sistema ou quero sugerir algo como entro em contato?</h3>
+         </a>
+         <div id="ocultar7">
+          <p class="left">
+            Nosso canal de comunicação é essencialmete pelo e-mail recuperarxml@gmail.com para que nossa comunicação fique sempre registrada.
+          </p>
+         </div>
 
-          <li><p class="left"><u>Qual a quantidade de chaves de acesso posso baixar com o plano mensal de R$ 50,00?</u><br />Não há quantidade limite para este plano. Pode-se baixar quantos XML quiser.</p></li>
+         <a class="question" onclick="toggle('ocultar8');">
+          <h3>Qual a quantidade de chaves de acesso posso baixar com o plano mensal de R$ 50,00?</h3>
+         </a>
+         <div id="ocultar8">
+          <p class="left">
+            Não há quantidade limite para este plano. Pode-se baixar quantos XML quiser.
+          </p>
+         </div> 
 
-          <li><p class="left"><u>Há limitação de baixas por CNPJ da empresa?</u><br />Não há limitação por CNPJ pois não utilizamos o certificado digital, ou seja, pode-se digitar chaves de acesso de qualquer CNPJ para recuperar o XML.</p></li>
+         <a class="question" onclick="toggle('ocultar9');">
+          <h3>Há limitação de baixas por CNPJ da empresa?</h3>
+         </a>
+         <div id="ocultar9">
+          <p class="left">
+            Não há limitação por CNPJ pois não utilizamos o certificado digital, ou seja, pode-se digitar chaves de acesso de qualquer CNPJ para recuperar o XML.
+          </p>
+         </div>
 
-          <li><p class="left"><u>Perdi todos os arquivos XML emitidos no mês e não tenho o número das chaves de acesso, consigo recuperar com este sistema?</u><br />O sistema RecuperarXML necessita das chaves de acesso para realizar a recuperação. Sem a chave de acesso não é possível recuperar o NF-e ou a NFC-e. Verifique na Secretaria da Fazenda do Estado emissor para que forneçam as chaves de acesso emitidas em um certo período.</p></li>
+         <a class="question" onclick="toggle('ocultar10');">
+          <h3>Perdi todos os arquivos XML emitidos no mês e não tenho o número das chaves de acesso, consigo recuperar com este sistema?</h3>
+         </a>
+         <div id="ocultar10">
+          <p class="left">
+            O sistema RecuperarXML necessita das chaves de acesso para realizar a recuperação. Sem a chave de acesso não é possível recuperar o NF-e ou a NFC-e. Verifique na Secretaria da Fazenda do Estado emissor para que forneçam as chaves de acesso emitidas em um certo período.
+          </p>
+         </div>
 
-         </ul>
-        </div>
        </div>
       </div>
     </section>
@@ -636,15 +704,6 @@
     </footer>
 
     <script>
-      $("#owntip").typed({
-        strings: ["Software para ^500 recuperar arquivos ^500 XML da NF-e e NFC-e. "],
-        stringsElement: $('#ownlist'),
-        typeSpeed: 0,
-        loop: false
-      });
-    </script>
-
-    <script>
      var clipboard = new Clipboard('.btn');
      $('#emailcopy').addEventListener('click', function() {
       clipboard.copy("recuperarxml@gmail.com");
@@ -655,7 +714,7 @@
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
-   
+
     <script type="text/javascript">
       try {
           var pageTracker = _gat._getTracker("UA-60912857-1");

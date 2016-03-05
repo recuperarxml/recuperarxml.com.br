@@ -28,3 +28,18 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+function toggle(id) {
+    var e = document.getElementById(id);
+    if(e.style.display == '')
+        e.style.display = 'none';
+    else
+        e.style.display = '';
+};
+
+function ocultar() {
+    for (var i = 1; i <=10; i++) {
+        var objSelect = document.getElementById("ocultar" + i);
+        objSelect.style.display = 'none';
+    }
+};
