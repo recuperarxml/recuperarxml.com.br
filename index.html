@@ -10,25 +10,25 @@
 	  <meta name="description" content="Software para recuperar arquivos XML da NF-e e NFC-e"/>    
 	  <meta name="author" content="RecuperarXML">
     <meta name="google-site-verification" content="-Q-YhpR_rXmbyirFC8oqI1yveOTJaz9fBabiIbJCOqw" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
     <link rel="cannonical" href="http://www.recuperarxml.com.br">
     <link rel="alternate" href="http://www.recuperarxml.com.br" hreflang="pt-br" />
     <title>RecuperarXML da NF-e e NFC-e</title>
 
-    <link href="./ext/css/introLoader.min.css" rel="stylesheet">
-    <link href="./ext/css/simple-hint.min.css" rel="stylesheet">
-    <link href="./ext/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./ext/css/recuperarxml.css" rel="stylesheet">
-    <link href="./ext/css/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/css/introLoader.min.css" rel="stylesheet">
+    <link href="./assets/css/simple-hint.min.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/recuperarxml.css" rel="stylesheet">
+    <link href="./assets/css/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <script src="./ext/js/jquery-1.11.0.js"></script>
-    <script src="./ext/js/bootstrap.min.js"></script>
-    <script src="./ext/js/jquery.easing.min.js"></script>
-    <script src="./ext/js/jquery.introLoader.pack.min.js"></script>
-    <script src="./ext/js/clipboard.min.js"></script>
-    <script src="./ext/js/recuperarxml.js"></script>
+    <script src="./assets/js/jquery-1.11.0.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.easing.min.js"></script>
+    <script src="./assets/js/jquery.introLoader.pack.min.js"></script>
+    <script src="./assets/js/clipboard.min.js"></script>
+    <script src="./assets/js/recuperarxml.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -198,7 +198,7 @@
                 <li><p class="left">Não é utilizado certificação digital para realizar a captura do XML.</p></li>
                 <li>
                   <p class="left">Instalação do software no computador e utilização de recursos da nuvem 
-                    <a target="_blank" title="Amazon Web Services" href="https://aws.amazon.com"><img alt="Amazon Web Services" title="Amazon Web Services" src="./ext/img/aws.png" width="105" height="39" />
+                    <a target="_blank" title="Amazon Web Services" href="https://aws.amazon.com"><img alt="Amazon Web Services" title="Amazon Web Services" src="./assets/img/aws.png" width="105" height="39" />
                     </a>
                   </p>
                 </li>
@@ -452,7 +452,7 @@
                 
               <p class="center">
                 <a href="http://www.recuperarxml.com.br/download/InstaladorRecuperarXML.exe" class="btn btn-install btn-lg hint-top" data-hint="Clique na imagem para realizar o download do Instalador">
-                  <img src="./ext/img/down.png" alt="Download" width="120" heigth="120">
+                  <img src="./assets/img/down.png" alt="Download" width="120" heigth="120">
                 </a>
               </p>
 
@@ -504,7 +504,7 @@
 
               <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
               <input type="hidden" name="itemCode" value="5136B9BE535313C3342F4FBBC0CAC8B7" />
-              <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento"/>
+              <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="350" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento"/>
               </form>
 
               <br/>
@@ -529,92 +529,92 @@
          <h2>PERGUNTAS FREQUENTES</h2>
          <br /><br />
 
-         <a class="question" onclick="toggle('ocultar1');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar1');">
           <h3>Posso contratar o sistema somente por um mês?</h3>
          </a>
          <div id="ocultar1">
-          <p class="left">
+          <p class="center">
             Sim. A sistema funcionará durante o período de um mês e não funcionará após isso. A renovação não é automática e não é obrigatória.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar2');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar2');">
           <h3>Quais os planos disponíveis para aquisição?</h3>
          </a>
          <div id="ocultar2">
-            <p class="left">
+            <p class="center">
               Existe somente um plano disponível: Plano com digitação das imagens captchas para todos os Estados do Brasil.
             </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar3');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar3');">
           <h3>O que significa a palavra "captcha"?</h3>
          </a>
          <div id="ocultar3">
-            <p class="left">
+            <p class="center">
               "Captchas" são as imagens distorcidas que devemos digitar a cada download de uma chave de acesso.
             </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar4');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar4');">
           <h3>Existe a possibilidade do sistema fazer a leitura automática das imagens (captchas)?</h3>
          </a>
          <div id="ocultar4">
-          <p class="left">
+          <p class="center">
             Não. Essas imagens são geradas pelas Secretarias de Fazenda de cada Estado e não podem ser lidas automaticamente. É uma política de segurança do próprio órgão governamental que não infringimos.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar5');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar5');">
           <h3>Quais são as formas de pagamento disponíveis?</h3>
          </a>
          <div id="ocultar5">
-          <p class="left">
+          <p class="center">
             Utilizamos exclusivamente o PagSeguro como intermediador dos pagamentos. O PagSeguro oferece pagamentos por cartões de crédito e débito de diversas operadoras, boletos bancários e parcelamento em várias vezes.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar6');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar6');">
           <h3>Fiz o pagamento do plano e como é a forma de liberação do sistema?</h3>
          </a>
          <div id="ocultar6">
-          <p class="left">
+          <p class="center">
             Realizado o pagamento com cartão de crédito ou débito o PagSeguro nos informa imediatamente e a liberação do sistema também ocorre imediatamente.<br />Realizado o pagamento com boleto o PagSeguro nos informa do pagamento somente no próximo dia útil, portanto, somente após a confirmação pelo PagSeguro poderemos liberá-lo. Em caso de urgência nos envie por e-mail a cópia do comprovante de pagamento que liberaremos imediatamente.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar7');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar7');">
           <h3>Caso encontre um problema no sistema ou quero sugerir algo como entro em contato?</h3>
          </a>
          <div id="ocultar7">
-          <p class="left">
+          <p class="center">
             Nosso canal de comunicação é essencialmete pelo e-mail recuperarxml@gmail.com para que nossa comunicação fique sempre registrada.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar8');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar8');">
           <h3>Qual a quantidade de chaves de acesso posso baixar com o plano mensal de R$ 50,00?</h3>
          </a>
          <div id="ocultar8">
-          <p class="left">
+          <p class="center">
             Não há quantidade limite para este plano. Pode-se baixar quantos XML quiser.
           </p>
          </div> 
 
-         <a class="question" onclick="toggle('ocultar9');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar9');">
           <h3>Há limitação de baixas por CNPJ da empresa?</h3>
          </a>
          <div id="ocultar9">
-          <p class="left">
+          <p class="center">
             Não há limitação por CNPJ pois não utilizamos o certificado digital, ou seja, pode-se digitar chaves de acesso de qualquer CNPJ para recuperar o XML.
           </p>
          </div>
 
-         <a class="question" onclick="toggle('ocultar10');">
+         <a class="question" title="Clique para ver a resposta" onclick="toggle('ocultar10');">
           <h3>Perdi todos os arquivos XML emitidos no mês e não tenho o número das chaves de acesso, consigo recuperar com este sistema?</h3>
          </a>
          <div id="ocultar10">
-          <p class="left">
+          <p class="center">
             O sistema RecuperarXML necessita das chaves de acesso para realizar a recuperação. Sem a chave de acesso não é possível recuperar o NF-e ou a NFC-e. Verifique na Secretaria da Fazenda do Estado emissor para que forneçam as chaves de acesso emitidas em um certo período.
           </p>
          </div>
@@ -632,12 +632,12 @@
           <h2>FALE CONOSCO</h2>
               
               <p>
-                <input id="emailcopy" readonly="readonly" value="recuperarxml@gmail.com">
-                <button class="btn hint-top" data-hint="Copiar e-mail" data-clipboard-target="#emailcopy">
-                  <img src="./ext/img/clippy.svg" width="20">
-                </button>
+                <input id="link" readonly="readonly" value="recuperarxml@gmail.com">
+                <button id="myHint" class="copiar-email" data-hint="Copiar e-mail" data-clipboard-target="#link">
+                  <img src="./assets/img/clippy.svg" width="20">
+                </button>              
               </p>
-    
+
               <p>
                 <ul class="list-inline banner-social-buttons">
                   <li>
@@ -667,17 +667,22 @@
             <a href="https://github.com/recuperarxml/recuperarxml.com.br/wiki/Termos" target="_blank" title="Termos de uso do RecuperarXML"><u>Termos de uso</u>
             </a><br />
             © 2014-2016 <a class="page-scroll" href="#intro">
-    		<img alt="RecuperarXML" title="Ir para o topo do site" src="./ext/img/up.png" width="24" height="24"></a>
+    		<img alt="RecuperarXML" title="Ir para o topo do site" src="./assets/img/up.png" width="24" height="24"></a>
     		Todos os direitos reservados.
      	</p>
       </div>
     </footer>
 
     <script>
-     var clipboard = new Clipboard('.btn');
-     $('#emailcopy').addEventListener('click', function() {
-      clipboard.copy("recuperarxml@gmail.com");
-     });
+      var clipboard = new Clipboard('.copiar-email', {});
+      clipboard.on('success', function(event) {
+        document.getElementById('myHint').setAttribute('data-hint', 'Copiado!');
+        window.setTimeout(function() {
+          event.clearSelection();
+          document.getElementById('myHint').setAttribute('data-hint', 'Copiar e-mail');
+        }
+      , 2000);
+      });
     </script>
 
     <script type="text/javascript">

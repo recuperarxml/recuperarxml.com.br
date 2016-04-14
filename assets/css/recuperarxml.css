@@ -468,3 +468,7 @@ p.spaceless {
     text-align: center;
     font-size: 18px;
 }
+
+.question:hover {
+    cursor:pointer;    
+}
