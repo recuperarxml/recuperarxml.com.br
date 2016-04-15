@@ -36,5 +36,3 @@ gulp.task('rx', function() {
     gulp.src('assets/css/font-awesome-4.1.0/scss/*.scss')
         .pipe(gulp.dest('dist/assets/css/font-awesome-4.1.0/scss'));
 });
-
-// TODO: inserir task para envio ao ftp com vinyl-ftp
