@@ -15,7 +15,7 @@
     <link rel="alternate" href="http://www.recuperarxml.com.br" hreflang="pt-br" />
     <title>RecuperarXML da NF-e e NFC-e</title>
 
-    <link href="./assets/css/introLoader.min.css" rel="stylesheet">
+    <link href="./assets/css/introLoader.css" rel="stylesheet">
     <link href="./assets/css/simple-hint.min.css" rel="stylesheet">
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/css/recuperarxml.css" rel="stylesheet">
@@ -26,7 +26,8 @@
     <script src="./assets/js/jquery-1.11.0.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/jquery.easing.min.js"></script>
-    <script src="./assets/js/jquery.introLoader.pack.min.js"></script>
+    <script src="./assets/js/spin.min.js"></script>
+    <script src="./assets/js/introLoader.js"></script>
     <script src="./assets/js/clipboard.min.js"></script>
     <script src="./assets/js/recuperarxml.js"></script>
 
@@ -34,14 +35,18 @@
       $(document).ready(function() {
           $("#load").introLoader({
               animation: {
-                  name: 'animationName',
+                  name: 'gifLoader',
                   options: {
-                      preventScroll: true
+                      exitFx:'slideDown',
+                      ease: "easeInOutCirc",
+                      style: "light",
+                      preventScroll: true,
+                      customGif: "http://www.recuperarxml.com.br/assets/img/load.gif"
                   }
               }
           });
       });      
-
+            
       window.onload = function(){
         ocultar();
       };
