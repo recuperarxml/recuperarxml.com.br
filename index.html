@@ -32,11 +32,16 @@
 
     <script>
       $(document).ready(function() {
-        $("#load").introLoader();
-      });
-    </script>
-    
-    <script type="text/javascript">
+          $("#load").introLoader({
+              animation: {
+                  name: 'animationName',
+                  options: {
+                      preventScroll: true
+                  }
+              }
+          });
+      });      
+
       window.onload = function(){
         ocultar();
       };
