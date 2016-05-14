@@ -1,9 +1,14 @@
-var gulp    = require('gulp');
-var cssnano = require('gulp-cssnano');
-var gutil   = require('gulp-util');
-var uglify  = require('gulp-uglify');
-var htmlmin = require('gulp-htmlmin');
-var less    = require('gulp-less');
+var gulp   = require('gulp');
+var cssnano  = require('gulp-cssnano');
+var gutil    = require('gulp-util');
+var uglify   = require('gulp-uglify');
+var htmlmin  = require('gulp-htmlmin');
+var less     = require('gulp-less');
+var imagemin = require('gulp-imagemin');
+var imagegif = require('imagemin-gifsicle');
+var imagejpg = require('imagemin-jpegtran');
+var imagepng = require('imagemin-optipng');
+var imagesvg = require('imagemin-svgo');
 
 gulp.task('rx', function() {
     
@@ -27,6 +32,10 @@ gulp.task('rx', function() {
     // css 
     gulp.src('assets/css/**/*.css')
         .pipe(cssnano()).pipe(gulp.dest('dist/assets/css'));
+
+    // images
+    gulp.src('assets/img/*.{png,jpg,svg,gif}')
+        .pipe(imagemin()).pipe(gulp.dest('dist/assets/img'));
 
     // copy do ./dist
     gulp.src('*.ico')

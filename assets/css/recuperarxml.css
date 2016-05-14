@@ -8,6 +8,7 @@ body {
   font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000000;
   background-color: #FFFFFF;
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 h1,
 h2,
@@ -127,6 +128,12 @@ a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+@media (min-width: 767px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+  }
+}
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
@@ -134,8 +141,18 @@ a:focus {
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
+@media (min-width: 767px) {
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+}
 .intro .intro-body .intro-text {
   font-size: 18px;
+}
+@media (min-width: 767px) {
+  .intro .intro-body .intro-text {
+    font-size: 25px;
+  }
 }
 .oquefaz-section {
   background-color: #E6E6FA;
@@ -151,24 +168,17 @@ a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+@media (min-width: 767px) {
+  .download-section {
+    padding: 100px 0;
+  }
+}
 .fale-section {
   background-color: #E6E6FA;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-@media (min-width: 767px) {
-  .intro {
-    height: 100%;
-    padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-    font-size: 100px;
-  }
-  .intro .intro-body .intro-text {
-    font-size: 25px;
-  }
 }
 .btn-circle {
   width: 70px;
@@ -241,9 +251,8 @@ a:focus {
   .content-section {
     padding-top: 250px;
   }
-  .download-section {
-    padding: 100px 0;
-  }
+}
+@media (min-width: 767px) {
   #map {
     height: 400px;
     margin-top: 250px;
@@ -323,9 +332,6 @@ img::selection {
 }
 img::-moz-selection {
   background: 0 0;
-}
-body {
-  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 p.left {
   text-align: left;
