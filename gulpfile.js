@@ -1,14 +1,16 @@
-var gulp   = require('gulp');
+var gulp     = require('gulp');
 var cssnano  = require('gulp-cssnano');
 var gutil    = require('gulp-util');
 var uglify   = require('gulp-uglify');
 var htmlmin  = require('gulp-htmlmin');
 var less     = require('gulp-less');
 var imagemin = require('gulp-imagemin');
+/*
 var imagegif = require('imagemin-gifsicle');
 var imagejpg = require('imagemin-jpegtran');
 var imagepng = require('imagemin-optipng');
 var imagesvg = require('imagemin-svgo');
+*/
 
 gulp.task('rx', function() {
     

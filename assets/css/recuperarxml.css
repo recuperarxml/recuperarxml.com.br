@@ -26,7 +26,7 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   p {
     margin: 0 0 35px;
     font-size: 20px;
@@ -98,7 +98,7 @@ a:focus {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .navbar {
     padding: 20px 0;
     border-bottom: 0;
@@ -128,7 +128,7 @@ a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .intro {
     height: 100%;
     padding: 0;
@@ -141,7 +141,7 @@ a:focus {
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
@@ -149,7 +149,7 @@ a:focus {
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .intro .intro-body .intro-text {
     font-size: 25px;
   }
@@ -168,7 +168,7 @@ a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .download-section {
     padding: 100px 0;
   }
@@ -185,7 +185,7 @@ a:focus {
   height: 70px;
   margin-top: 15px;
   padding: 7px 16px;
-  border: 2px solid #FFFFFF;
+  border: 3px solid #FFFFFF;
   border-radius: 35px;
   font-size: 40px;
   color: #FFFFFF;
@@ -198,7 +198,7 @@ a:focus {
 .btn-circle:focus {
   outline: 0;
   color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
 }
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
@@ -247,12 +247,12 @@ a:focus {
 .content-section {
   padding-top: 100px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .content-section {
     padding-top: 250px;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #map {
     height: 400px;
     margin-top: 250px;
@@ -297,7 +297,7 @@ ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
@@ -332,6 +332,22 @@ img::selection {
 }
 img::-moz-selection {
   background: 0 0;
+}
+.pagseguro {
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  background: #FFFFFF;
+  width: 200px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.pagseguro:hover,
+.pagseguro:focus {
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  width: 235px;
 }
 p.left {
   text-align: left;
@@ -381,8 +397,22 @@ p.spaceless {
   height: auto;
   padding: 50px 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .question:hover {
   cursor: pointer;
+}
+#svg-map text {
+  fill: #fff;
+  font: 12px Arial-BoldMT, sans-serif;
+}
+#svg-map a {
+  text-decoration: none;
+}
+#svg-map .circle {
+  fill: #2e7bcf;
 }

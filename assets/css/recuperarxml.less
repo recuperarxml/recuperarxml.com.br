@@ -6,8 +6,7 @@
 @colorBackgroundBlue: #2e7bcf;
 @colorIce: #E6E6FA;
 @colorGray: #555;
-@ponto-de-quebra: 767px;
-
+@ponto-de-quebra: 768px;
 
 html {
     width: 100%;
@@ -215,7 +214,7 @@ a {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid @colorWhite;
+    border: 3px solid @colorWhite;
     border-radius: 35px;
     font-size: 40px;
     color: @colorWhite;
@@ -229,7 +228,7 @@ a {
 .btn-circle:focus {
     outline: 0;
     color: @colorWhite;
-    background: fade(@colorWhite, 10);
+    background: fade(@colorWhite, 20);
 }
 
 .btn-circle i.animated {
@@ -389,6 +388,24 @@ img::-moz-selection {
     background: 0 0;
 }
 
+.pagseguro {
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    background: @colorWhite;
+    width: 200px;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+    &:hover,
+    &:focus{
+        border-radius: 5px;
+        padding: 5px 5px 5px 5px;
+        width: 235px;
+    }
+}
+
 p.left {
   text-align: left;
 }
@@ -445,9 +462,17 @@ p.spaceless {
     height: auto;
     padding: 50px 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 
     &:hover {
       cursor:pointer;    
     }
 }
+
+#svg-map text { fill:#fff; font:12px Arial-BoldMT, sans-serif; }
+#svg-map a{ text-decoration:none }
+#svg-map .circle { fill:#2e7bcf }
