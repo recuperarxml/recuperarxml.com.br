@@ -28,13 +28,6 @@
     <script src="./assets/js/clipboard.min.js"></script>
     <script src="./assets/js/recuperarxml.js"></script>
     
-    <!--
-    <script>
-      window.onload = function(){
-        ocultarFAQ();
-      };
-    </script>-->
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -179,6 +172,7 @@
             <div class="col-lg-8 col-lg-offset-2">
               <h3>CARACTERÍSTICAS</h3>
                 <ul class="columnbox">
+                <li><p class="left">Necessário ter previavemte as chaves de acesso que necessita recuperar os XMLs.</p></li>
                 <li><p class="left">Recuperação do XML da <b>NF-e</b> de todos os Estados do Brasil.</p></li>
                 <li><p class="left">Recuperação do XML da <b>NFC-e</b> dos Estados: MT, RS, PR, RJ, ES, DF, AC, TO, RO, RR, AP, PA, AL, BA, PB, PI, RN, SE e MA.</p></li>
                 <li><p class="left">A versão grátis limita o download de 5 arquivos.</p></li>
@@ -774,12 +768,12 @@
             <h2>DOWNLOAD</h2>
             <p>
               <p class="center">
-                Faça o download do Instalador clicando na imagem abaixo.
+                Teste grátis agora! Faça o download do Instalador clicando na imagem abaixo.
               </p>
                 
               <p class="center">
                 <a href="http://www.recuperarxml.com.br/download/InstaladorRecuperarXML.exe" class="btn btn-install btn-lg hint-top" data-hint="Clique na imagem para realizar o download do Instalador">
-                  <img src="./assets/img/down.png" alt="Download"> <!-- width="120" heigth="120">-->
+                  <img src="./assets/img/down.png" alt="Download">
                 </a>
               </p>
 
@@ -810,27 +804,31 @@
             <tr class="info">
               <td>
               <p class="center">
-                Após iniciado o software pela primeira vez, é registrado o computador e disponibilizado 5 downloads de arquivos XML sem custos. Após os testes as funcionalidades serão bloqueadas até a compra do plano.
-              </p>
-
-              <p class="center">
-                Com a contratação da versão paga obtém-se a liberação total e sem limites de downloads conforme a quantidade de meses contratados:
+				<br/>
+                Teste agora! É grátis para download de 5 arquivos XML. <br/>
+				Após a compra não há limites da quantidade de arquivos a baixar.
               </p>
               
-              <p class="center">
-                      <b><u>R$ 50  por mês por computador</u></b> <br/>
-                      (Para emissões de boleto o PagSeguro acrescenta R$ 1,00)<br/>
+              <p class="center rxPrice">
+                R$ 50
+              </p>
+			                
+			  <p class="center">
+			    <b><u>por mês e por computador</u></b><br/>
+                (Para emissões de boleto o PagSeguro acrescenta R$ 1,00)<br/>
               </p>
 
-              <p class="center">
-                Clique no botão do PagSeguro abaixo para <br />
-                escolher a quantidade de meses que deseja licenciar:
-              </p>
-
-              <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
+			  <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
               <input type="hidden" name="itemCode" value="5136B9BE535313C3342F4FBBC0CAC8B7" />
                <input type="image" class="pagseguro" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="300" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento"/>
               </form>
+			  
+              <!--
+			  <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add?iot=button" method="post">
+              <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
+              <input type="image" class="pagseguro" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="300" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento"/>
+              </form>-->
+              
               <br/><br/>
 
               </td>
@@ -1014,7 +1012,8 @@
                     <a href="https://www.linkedin.com/company/recuperarxml" target="_blank"  title="Linkedin" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                   </li>
                   <li>
-                    <a href="https://github.com/recuperarxml" target="_blank" title="Github" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">GitHub</span></a>
+                    <a href="https://github.com/RecuperarXML/recuperarxml.com.br/wiki" target="_blank" title="https://github.com/RecuperarXML/recuperarxml.com.br/wiki" class="btn btn-default btn-lg"><i class="fa fa-terminal"></i> <span class="network-name">Wiki</span></a>
+
                   </li>
                 </ul>
               </p>
@@ -1058,18 +1057,6 @@
           pageTracker._trackPageview();
           } catch(err) {}
     </script>
-
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:216534,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-
 
   </body>
 </html>
