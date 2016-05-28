@@ -377,20 +377,20 @@ p.spaceless {
   -webkit-column-count: 1;
   -webkit-column-gap: 1em;
 }
-.columnbox3 {
-  -moz-column-count: 2;
-  -moz-column-gap: 0em;
-  column-count: 2;
-  column-gap: 0em;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 0em;
-}
 .number {
   font-size: 55pt;
   font-weight: bold;
   text-align: center;
   font-family: 'Dosis', sans-serif;
   color: #555;
+}
+.rxPrice {
+  border: 0px solid #2e7bcf;
+  color: #000000;
+  background-color: transparent;
+  font-size: 45pt;
+  font-weight: bold;
+  text-align: center;
 }
 .question {
   width: 100%;
