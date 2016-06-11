@@ -1,11 +1,13 @@
-var gulp     = require('gulp');
-var cssnano  = require('gulp-cssnano');
-var gutil    = require('gulp-util');
-var uglify   = require('gulp-uglify');
-var htmlmin  = require('gulp-htmlmin');
-var less     = require('gulp-less');
-var clean    = require('gulp-clean');
-var imagemin = require('gulp-imagemin');
+var gulp = require('gulp'),
+    cssnano = require('gulp-cssnano'),
+    gutil = require('gulp-util'),
+    uglify = require('gulp-uglify'),
+    htmlmin = require('gulp-htmlmin'),
+    less = require('gulp-less'),
+    clean = require('gulp-clean'),
+    imagemin = require('gulp-imagemin'),
+    browserSync = require('browser-sync').create()
+    reload = browserSync.reload;
 
 // delete ./dist
 gulp.task('clearDist', function() {
@@ -68,11 +70,25 @@ gulp.task('rx', ['minImages'], function() {
         .pipe(cssnano()).pipe(gulp.dest('dist/assets/css/font-awesome-4.1.0/css'));
 });
 
+// Browser Sync
+gulp.task('server', function() {
+    browserSync.init({
+        server: {
+          baseDir: './'
+        }
+    });
+  gulp.watch(['index.html', 
+              'assets/js/**/*.js', 
+              'assets/css/**/*.less']).on('change', reload);
+
+});
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(['index.html', 
               'assets/js/**/*.js', 
               'assets/css/**/*.less'], ['rx']);
+
 });
 
 // Default task
