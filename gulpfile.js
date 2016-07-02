@@ -6,8 +6,11 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin'),
-    browserSync = require('browser-sync').create()
+    browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
+    //jshint = require('gulp-jshint'),
+    //jshintStylish = require('jshint-stylish'),
+    //csslint = require('gulp-csslint');
 
 // delete ./dist
 gulp.task('clearDist', function() {
@@ -81,6 +84,20 @@ gulp.task('server', function() {
               'assets/js/**/*.js', 
               'assets/css/**/*.less']).on('change', reload);
 
+
+  gulp.watch('src/js/**/*.js').on('change', function(event) {
+      console.log("Linting " + event.path);
+      gulp.src(event.path)
+          .pipe(jshint())
+          .pipe(jshint.reporter(jshintStylish));
+  });
+
+  gulp.watch('src/css/**/*.css').on('change', function(event) {
+      console.log("Linting " + event.path);
+      gulp.src(event.path)
+          .pipe(csslint())
+          .pipe(csslint.reporter());
+  });      
 });
 
 // Rerun the task when a file changes
