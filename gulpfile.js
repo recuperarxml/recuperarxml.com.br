@@ -85,14 +85,14 @@ gulp.task('server', function() {
               'assets/css/**/*.less']).on('change', reload);
 
 
-  gulp.watch('src/js/**/*.js').on('change', function(event) {
+  gulp.watch('assets/js/**/*.js').on('change', function(event) {
       console.log("Linting " + event.path);
       gulp.src(event.path)
           .pipe(jshint())
           .pipe(jshint.reporter(jshintStylish));
   });
 
-  gulp.watch('src/css/**/*.css').on('change', function(event) {
+  gulp.watch('assets/css/**/*.css').on('change', function(event) {
       console.log("Linting " + event.path);
       gulp.src(event.path)
           .pipe(csslint())
