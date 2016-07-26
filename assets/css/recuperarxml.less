@@ -77,7 +77,7 @@ a {
     .top-nav-collapse {
         padding: 0;
         color: @colorWhite;
-        background: @colorBackgroundBlue;
+        background: @colorBackgroundBlue url(../img/header.jpg) 0 0 repeat-x;
     }
 
     .navbar-brand {
@@ -95,7 +95,8 @@ a {
             &:focus,
             &:active {
                 outline: 0;
-                color: @colorWhite;
+                color: @colorBlue;
+                background: @colorBackgroundBlue url(../img/header.jpg) 0 0 repeat-x;
             }
         }
     }
@@ -120,7 +121,30 @@ a {
     }
 }
 
-@media(min-width:@ponto-de-quebra) {
+@media screen and (max-width: @ponto-de-quebra) {
+    .navbar {
+        padding: 0px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+    
+    .nav li {
+        outline: 0;
+        color: @colorWhite;
+        background: @colorBackgroundBlue url(../img/header.jpg) 0 0 repeat-x;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background: @colorBackgroundBlue url(../img/header.jpg) 0 0 repeat-x;
+    }
+}
+
+@media screen and (min-width: @ponto-de-quebra) {
     .navbar {
         padding: 20px 0;
         border-bottom: 0;
@@ -135,7 +159,6 @@ a {
         padding: 0;
         background: @colorBackgroundBlue url(../img/header.jpg) 0 0 repeat-x;
     }
-
 }
 
 .intro {
@@ -449,14 +472,6 @@ p.spaceless {
   -webkit-column-gap: 1em;
 }
 
-.number {
-    font-size: 55pt;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Dosis', sans-serif;
-    color: @colorGray;
-}
-
 .rxPrice {
     border: 0px solid @colorBackgroundBlue;
     color: @colorBlack;
@@ -464,22 +479,6 @@ p.spaceless {
     font-size: 45pt;
     font-weight: bold;
     text-align: center;
-}
-
-.question {
-    width: 100%;
-    height: auto;
-    padding: 50px 0;
-    text-align: center;
-    font-size: 20px;
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-
-    &:hover {
-      cursor:pointer;    
-    }
 }
 
 #svg-map text { fill:#fff; font:12px Arial-BoldMT, sans-serif; }

@@ -357,14 +357,11 @@
         <div class="container">
           <div class="col-lg-8 col-lg-offset-2">
             <h1 class="brand-heading">PREÇO</h1>
+            <br/><br/>
 
+
+            <p>
               <p class="center">
-              <table class="table table-condensed">
-        
-            <tr class="">
-              <td>
-              <p class="center">
-                <br/>
                 <b><u>Por mês e por computador</u></b>
               </p>
               
@@ -381,24 +378,14 @@
               </p>
 
               <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
-              <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
-              <input type="hidden" name="iot" value="button" />
-              <input type="image" class="pagseguro" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="300" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+                <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" class="pagseguro" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="300" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
               </form>
 
               <br/><br/>
 
-              </td>
-            </tr>
-
-            <tr class="">
-              <td>
-                <br/>
-                <p class="center">
-                  <h3>Formas de Pagamento</h3>
-                </p>
-
-                <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
+              <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
                 <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
                 
                 <picture>
@@ -406,14 +393,9 @@
                   <source src="./assets/img/pagseguro_formaspgto.jpg">
                   <input type="image" src="./assets/img/pagseguro_formaspgto.jpg" name="submit" alt="Pague com PagSeguro" title="Formas de pagamento disponíveis">
                 </picture>
-                </form>
-
-                <br/><br/>
-              </td>
-            </tr>
-            </table>
-												
+              </form>
             </p>
+												
           </div>
         </div>
       </div>
@@ -780,7 +762,7 @@
               <p>
                 <input id="link" readonly="readonly" value="recuperarxml@gmail.com">
                 <button id="myHint" class="copiar-email" data-hint="Copiar e-mail" data-clipboard-target="#link">
-                  <img src="./assets/img/clippy.svg" width="20">
+                  Copiar!
                 </button>              
               </p>
 
@@ -821,7 +803,7 @@
     <script>
       var clipboard = new Clipboard('.copiar-email', {});
       clipboard.on('success', function(event) {
-        document.getElementById('myHint').setAttribute('data-hint', 'Copiado!');
+        document.getElementById('myHint').setAttribute('data-hint', 'Copiado e-mail para área de transferência!');
         window.setTimeout(function() {
           event.clearSelection();
           document.getElementById('myHint').setAttribute('data-hint', 'Copiar e-mail');

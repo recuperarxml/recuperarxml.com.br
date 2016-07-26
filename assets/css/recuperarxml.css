@@ -65,7 +65,7 @@ a:focus {
 .navbar-custom .top-nav-collapse {
   padding: 0;
   color: #FFFFFF;
-  background: #2e7bcf;
+  background: #2e7bcf url(../img/header.jpg) 0 0 repeat-x;
 }
 .navbar-custom .navbar-brand {
   font-weight: 700;
@@ -81,7 +81,8 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
   outline: 0;
-  color: #FFFFFF;
+  color: #219ab3;
+  background: #2e7bcf url(../img/header.jpg) 0 0 repeat-x;
 }
 .navbar-custom a {
   color: #FFFFFF;
@@ -98,7 +99,27 @@ a:focus {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
 }
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .nav li {
+    outline: 0;
+    color: #FFFFFF;
+    background: #2e7bcf url(../img/header.jpg) 0 0 repeat-x;
+  }
+  .top-nav-collapse {
+    padding: 0;
+    background: #2e7bcf url(../img/header.jpg) 0 0 repeat-x;
+  }
+}
+@media screen and (min-width: 768px) {
   .navbar {
     padding: 20px 0;
     border-bottom: 0;
@@ -385,13 +406,6 @@ p.spaceless {
   -webkit-column-count: 1;
   -webkit-column-gap: 1em;
 }
-.number {
-  font-size: 55pt;
-  font-weight: bold;
-  text-align: center;
-  font-family: 'Dosis', sans-serif;
-  color: #555;
-}
 .rxPrice {
   border: 0px solid #2e7bcf;
   color: #000000;
@@ -399,20 +413,6 @@ p.spaceless {
   font-size: 45pt;
   font-weight: bold;
   text-align: center;
-}
-.question {
-  width: 100%;
-  height: auto;
-  padding: 50px 0;
-  text-align: center;
-  font-size: 20px;
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-.question:hover {
-  cursor: pointer;
 }
 #svg-map text {
   fill: #fff;
