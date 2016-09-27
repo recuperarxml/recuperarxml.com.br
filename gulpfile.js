@@ -35,8 +35,15 @@ gulp.task('minHTML', ['compileLESS'], function() {
         .pipe(gulp.dest('dist'));
 });
 
+// min assinaturas
+gulp.task('minHTMLAssinatura', ['minHTML'], function() {
+    return gulp.src(['assinatura/index.html'])
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist/assinatura'));
+});
+
 // min js
-gulp.task('minJS', ['minHTML'], function() {
+gulp.task('minJS', ['minHTMLAssinatura'], function() {
     return gulp.src(['assets/js/**/*.js'])
         .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js'));              
@@ -81,6 +88,8 @@ gulp.task('server', function() {
         }
     });
   gulp.watch(['index.html', 
+              'assinatura/index.html',
+              'boleto.html',
               'assets/js/**/*.js', 
               'assets/css/**/*.less']).on('change', reload);
 
@@ -103,6 +112,8 @@ gulp.task('server', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(['index.html', 
+              'assinatura/index.html',
+              'boleto.html',
               'assets/js/**/*.js', 
               'assets/css/**/*.less'], ['rx']);
 
