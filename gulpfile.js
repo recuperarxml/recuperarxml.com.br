@@ -28,22 +28,28 @@ gulp.task('compileLESS', ['clearDist'], function() {
 // min html
 gulp.task('minHTML', ['compileLESS'], function() {
     return gulp.src(['index.html',
-              'google9593787cc7c11ddd.html',
-              'boleto.html'
+              'google9593787cc7c11ddd.html'
              ])
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
 
 // min assinaturas
-gulp.task('minHTMLAssinatura', ['minHTML'], function() {
+gulp.task('minAssinatura', ['minHTML'], function() {
     return gulp.src(['assinatura/index.html'])
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist/assinatura'));
 });
 
+// min boleto
+gulp.task('minBoleto', ['minAssinatura'], function() {
+    return gulp.src(['boleto/index.html'])
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist/boleto'));
+});
+
 // min js
-gulp.task('minJS', ['minHTMLAssinatura'], function() {
+gulp.task('minJS', ['minBoleto'], function() {
     return gulp.src(['assets/js/**/*.js'])
         .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js'));              
@@ -89,7 +95,7 @@ gulp.task('server', function() {
     });
   gulp.watch(['index.html', 
               'assinatura/index.html',
-              'boleto.html',
+              'boleto/index.html',
               'assets/js/**/*.js', 
               'assets/css/**/*.less']).on('change', reload);
 
@@ -113,7 +119,7 @@ gulp.task('server', function() {
 gulp.task('watch', function() {
   gulp.watch(['index.html', 
               'assinatura/index.html',
-              'boleto.html',
+              'boleto/index.html',
               'assets/js/**/*.js', 
               'assets/css/**/*.less'], ['rx']);
 

@@ -69,7 +69,7 @@
               <a class="page-scroll" href="#download" title="Link para download">DOWNLOAD</a>
             </li>
             <li>
-              <a class="page-scroll" href="#price" title="Plano para aquisição da licença">PREÇO</a>
+              <a class="page-scroll" href="#planos" title="Plano para aquisição da licença">PLANOS</a>
             </li>
             <li>
               <a class="page-scroll" href="#clients" title="Clientes cadastrados">CLIENTES</a>
@@ -105,13 +105,13 @@
               
               <li>
                 <a class="page-scroll btn btn-embossed btn-primary btn-lg view" role="button" href="#download">
-                  <span class="network-name">Download</span>
+                  <span class="network-name">Teste grátis</span>
                 </a>
               </li>
 
               <li>
-                <a class="page-scroll btn btn-embossed btn-primary btn-lg view" role="button" href="#price">
-                  <span class="network-name">Preço</span>
+                <a class="page-scroll btn btn-embossed btn-primary btn-lg view" role="button" href="#planos">
+                  <span class="network-name">Planos</span>
                 </a>
               </li>
 
@@ -351,56 +351,55 @@
       </div>
     </section>
 
-    <!-- Price Section -->
-    <section id="price" class="content-section text-center">
+    <section id="planos" class="content-section text-center">
       <div class="faq-section">
         <div class="container">
           <div class="col-lg-8 col-lg-offset-2">
-            <h1 class="brand-heading">PREÇO</h1>
-            <br/><br/>
+            <h1 class="brand-heading">PLANOS</h1>
+            <br /><br />
 
-
-            <p>
-              <p class="center">
-                <b><u>Por mês e por computador</u></b>
-              </p>
-              
-              <p class="rxPrice">
-                <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
-                <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
-                <input type="hidden" name="iot" value="button" />
-                <input type="submit" name="submit" id="submit" value="R$ 49" class="btn btn-embossed btn-primary btn-xlarge" alt="Clique aqui para pagar">
-                </form>
-              </p>
-			                
-			        <p class="center">
-			          Para emissões de boleto o PagSeguro acrescenta R$ 1,00
-              </p>
-
-              <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
-                <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
-                <input type="hidden" name="iot" value="button" />
-                <input type="image" class="pagseguro" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="300" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
-              </form>
-
-              <br/><br/>
-
-              <form target="pagseguro2" action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
-                <input type="hidden" name="itemCode" value="2FED5ABF5B5BEBF994ED6FA9C32AE1BB" />
+            <div class="plano">
+              <h3>Mensal</h3>
+              <div class="plano-preco">R$ 49</div>
+                <ul class="itens-plano">
+                  <li><h4>1 único mês</h4></li>
+                  <li>Boleto ou Cartão de crédito</li>
+                  <li>Compra com PagSeguro<span class="icone-check"></span></li>
+                  <li>R$ 1,00 emissão do boleto<span class="icone-check"></span></li>
+                  <li>Licença por computador<span class="icone-check"></span></li>
+                  <li>Liberação imediata<span class="icone-check"></span></li>
+                  <li></li>
+                </ul>
                 
-                <picture>
-                  <source src="./assets/img/pagseguro_formaspgto_vertical.jpg" media="(max-width: 768px)">
-                  <source src="./assets/img/pagseguro_formaspgto.jpg">
-                  <input type="image" src="./assets/img/pagseguro_formaspgto.jpg" name="submit" alt="Pague com PagSeguro" title="Formas de pagamento disponíveis">
-                </picture>
-              </form>
-            </p>
-												
-          </div>
-        </div>
-      </div>
-    </section>
+                <form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
+                <input type="hidden" name="code" value="4A7A7F0F3333A27BB4786FAFC827D921" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+                </form>
+              </div>
 
+            <div class="plano">
+              <h3>Assinatura</h3>
+              <div class="plano-preco">R$ 49</div>
+                <ul class="itens-plano">
+                  <li><h4>3, 6 ou 12 meses</h4></li>
+                  <li>Somente Cartão de crédito</li>
+                  <li>Compra com PagSeguro<span class="icone-check"></span></li>
+                  <li>Sem taxa do boleto<span class="icone-check"></span></li>
+                  <li>Licença por computador<span class="icone-check"></span></li>
+                  <li>Liberação imediata<span class="icone-check"></span></li>
+                  <li></li>
+                </ul>
+                <form target="pagseguro1" action="http://www.recuperarxml.com.br/assinatura" method="post">
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </section>  
 
     <!-- Clients -->
     <section id="clients" class="content-section text-center">
@@ -794,7 +793,7 @@
     	<br /><br />
         <p>
             © 2014-2016 <a class="page-scroll" href="#intro">
-    		<img alt="RecuperarXML" title="Ir para o topo do site" src="./assets/img/up.png" width="24" height="24"></a>
+    		<img alt="RecuperarXML" title="Ir para o topo do site" src="./assets/img/up.png" width="24" height="24"> </a>
     		RecuperarXML
      	</p>
       </div>
