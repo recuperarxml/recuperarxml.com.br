@@ -438,9 +438,6 @@ p.spaceless {
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
 }
-.plano-preco {
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .plano:hover {
   background: #dedede;
 }
@@ -458,6 +455,21 @@ p.spaceless {
   color: #2e7bcf;
   font-size: 2.75em;
 }
+.plano button {
+  background: #2e7bcf;
+  border: 0px solid #2e7bcf;
+  color: #FFFFFF;
+  width: 210px;
+  height: 38px;
+  font-size: 1.8em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  margin-left: 0em;
+}
+.plano-preco {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .itens-plano {
   padding-left: 1.2em;
 }
@@ -473,18 +485,6 @@ p.spaceless {
 }
 .itens-plano span {
   float: right;
-}
-.plano button {
-  background: #2e7bcf;
-  border: 0px solid #2e7bcf;
-  color: #FFFFFF;
-  width: 210px;
-  height: 38px;
-  font-size: 1.8em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-  margin-left: 0em;
 }
 .icone-check,
 .icone-x {
@@ -502,9 +502,6 @@ p.spaceless {
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
 }
-.numeros-number {
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .numeros:hover {
   background: #dedede;
 }
@@ -521,4 +518,43 @@ p.spaceless {
   text-align: center;
   color: #2e7bcf;
   font-size: 2.8em;
+}
+.numeros-number {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.assinatura {
+  background: #dedede;
+  width: 18em;
+  display: inline-block;
+  margin: 1em 0 0 1.4em;
+  padding-bottom: 2em;
+}
+.assinatura h3 {
+  color: #fff;
+  font-size: 1.8em;
+  background: #2e7bcf;
+  text-align: center;
+  height: 2em;
+  padding-top: .6em;
+  margin-top: 0;
+}
+.assinatura div {
+  text-align: center;
+  color: #2e7bcf;
+  font-size: 2.75em;
+}
+.assinatura button {
+  background: #2e7bcf;
+  border: 0px solid #2e7bcf;
+  color: #FFFFFF;
+  width: 210px;
+  height: 38px;
+  font-size: 1.8em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  margin-left: 0em;
+}
+.assinatura-preco {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

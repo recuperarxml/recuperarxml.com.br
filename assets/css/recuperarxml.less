@@ -488,10 +488,10 @@ p.spaceless {
 /** Planos **/
 .planos {
   background: #1e2c35;
-}
 
-.planos h2 {
-  color: @colorWhite;
+  h2 {
+    color: @colorWhite;
+  }
 }
 
 .plano {
@@ -500,63 +500,65 @@ p.spaceless {
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
+
+  &:hover {
+    background: #dedede;
+  }
+  
+  h3 {
+    color: #fff;
+    font-size: 1.8em;
+    background: @colorBackgroundBlue;
+    text-align: center;
+    height: 2em;
+    padding-top: .6em;
+    margin-top: 0;
+  }
+
+  div {
+    text-align: center;
+    color: @colorBackgroundBlue;
+    font-size: 2.75em;
+  }
+  
+  button {
+    background: @colorBackgroundBlue;
+    border: 0px solid @colorBackgroundBlue;
+    color: @colorWhite;
+    width: 210px;
+    height: 38px;
+    font-size: 1.8em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    margin-left: 0em;
+  }
 }
 
 .plano-preco {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.plano:hover {
-  background: #dedede;
-}
-
-.plano h3 {
-  color: #fff;
-  font-size: 1.8em;
-  background: @colorBackgroundBlue;
-  text-align: center;
-  height: 2em;
-  padding-top: .6em;
-  margin-top: 0;
-}
-
-.plano div {
-  text-align: center;
-  color: @colorBackgroundBlue;
-  font-size: 2.75em;
-}
 
 .itens-plano {
   padding-left: 1.2em;
-}
 
-.itens-plano li {
-  font-size: 1em;
-  list-style: none;
-  border-bottom: 1px solid #acacac;
-  padding: .5em;
-  width: 14.8em;
-}
+  li {
+    font-size: 1em;
+    list-style: none;
+    border-bottom: 1px solid #acacac;
+    padding: .5em;
+    width: 14.8em;
 
-.itens-plano li:last-child {
-  border: 0;
-}
-
-.itens-plano span {
-  float: right;
-}
-
-.plano button {
-  background: @colorBackgroundBlue;
-  border: 0px solid @colorBackgroundBlue;
-  color: @colorWhite;
-  width: 210px;
-  height: 38px;
-  font-size: 1.8em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-  margin-left: 0em;
+     &:last-child {
+      border: 0;
+    }
+  }
+  
+  span {
+    float: right;
+  }
+  
 }
 
 .icone-check, .icone-x {
@@ -575,24 +577,69 @@ p.spaceless {
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
+  
+  &:hover {
+    background: #dedede;
+  }
+
+  h4 {
+    color: #fff;
+    font-size: 1.2em;
+    background: #2e7bcf;
+    text-align: center;
+    height: 4em;
+    padding-top: .6em;
+    margin-top: 0;
+  }
+  
+  div {
+    text-align: center;
+    color: #2e7bcf;
+    font-size: 2.8em;
+  }
 }
+
 .numeros-number {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.numeros:hover {
+
+.assinatura {
   background: #dedede;
+  width: 18em;
+  display: inline-block;
+  margin: 1em 0 0 1.4em;
+  padding-bottom: 2em;
+  
+  h3 {
+    color: #fff;
+    font-size: 1.8em;
+    background: @colorBackgroundBlue;
+    text-align: center;
+    height: 2em;
+    padding-top: .6em;
+    margin-top: 0;
+  }
+
+  div {
+    text-align: center;
+    color: @colorBackgroundBlue;
+    font-size: 2.75em;
+  }
+  
+  button {
+    background: @colorBackgroundBlue;
+    border: 0px solid @colorBackgroundBlue;
+    color: @colorWhite;
+    width: 210px;
+    height: 38px;
+    font-size: 1.8em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    margin-left: 0em;
+  }
 }
-.numeros h4 {
-  color: #fff;
-  font-size: 1.2em;
-  background: #2e7bcf;
-  text-align: center;
-  height: 4em;
-  padding-top: .6em;
-  margin-top: 0;
-}
-.numeros div {
-  text-align: center;
-  color: #2e7bcf;
-  font-size: 2.8em;
+
+.assinatura-preco {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
