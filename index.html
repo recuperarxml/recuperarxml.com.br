@@ -205,7 +205,7 @@
                 </p>
 
                 <p class="center">
-                  A perda do arquivo XML trás enormes transtornos aos contadores uma vez que mensalmente devem enviar informações detalhadas do faturamento das empresas aos órgãos fiscais estaduais e federais.
+                  A perda do arquivo XML trás enormes transtornos à contabilidade das empresas uma vez que mensalmente devem enviar informações detalhadas do faturamento das empresas aos órgãos fiscais estaduais e federais.
                 </p>
 
             </div>
@@ -325,7 +325,7 @@
             <div class="col-sm-4 text-center">
               <img class="rotate" src="./assets/img/beats.svg" alt="">
                <h3>Não faz</h3>
-               <p class="lead">Não faz o uso do certificado digital. </p>
+               <p class="lead">Não faz o uso do certificado digital, por isso validade o arquivo XML após a importação.</p>
             </div>
 
           </div>
@@ -412,11 +412,13 @@
                   <li></li>
                 </ul>
                 
-                <form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
-                <input type="hidden" name="code" value="4A7A7F0F3333A27BB4786FAFC827D921" />
-                <input type="hidden" name="iot" value="button" />
-                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
-                </form>
+                <div class="button-pagseguro">
+					<form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
+					<input type="hidden" name="code" value="4A7A7F0F3333A27BB4786FAFC827D921" />
+					<input type="hidden" name="iot" value="button" />
+					<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+					</form>
+				</div>
               </div>
 
             <div class="plano">
@@ -431,9 +433,12 @@
                   <li>Liberação imediata<span class="icone-check"></span></li>
                   <li></li>
                 </ul>
-                <form target="pagseguro1" action="http://www.recuperarxml.com.br/assinatura" method="post">
-                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
-                </form>
+
+                <div class="button-pagseguro">
+					<form target="pagseguro1" action="http://www.recuperarxml.com.br/assinatura" method="post">
+					<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+					</form>
+				</div>
 
               </div>
             </div>
@@ -527,7 +532,7 @@
     	<br /><br />
 
         <p>
-             RecuperarXML © 2014-2016 <a class="page-scroll" href="#intro">
+             RecuperarXML © 2014-2017 <a class="page-scroll" href="#intro">
           <img alt="RecuperarXML" title="Ir para o topo do site" src="./assets/img/up.png" width="24" height="24"></a>
           Todos os direitos reservados.
         </p>
