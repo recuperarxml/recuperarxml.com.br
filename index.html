@@ -35,6 +35,23 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<script>
+		$(document).ready(function() {
+		  var bgArray = ['intro.jpg', 'intro2.jpg'];
+		  var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+		  var path = 'assets/img/';
+		  var imageUrl = path + bg;
+		  $('#intro').css('background', 'url(' + imageUrl +') no-repeat center center fixed');
+		  $('#intro').css('-webkit-background-size', 'cover');
+		  $('#intro').css('-moz-background-size', 'cover');
+		  $('#intro').css('-o-background-size', 'cover');
+		  $('#intro').css('background-size', 'cover');
+		  $('#intro').css('width', '100%');
+		  $('#intro').css('height', '100%');
+		  $('#intro').css('align', 'center');
+		});
+	</script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -515,9 +532,9 @@
           Todos os direitos reservados.
         </p>
 
-        <p>
+        <!--<p>
           Feito com <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> em Cuiabá - Mato Grosso - Brasil
-       	</p>
+       	</p>-->
       </div>
     </footer>
 
