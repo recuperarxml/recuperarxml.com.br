@@ -438,18 +438,6 @@ img::-moz-selection {
     }
 }
 
-/*
-.button-pagseguro {
-    &:hover,
-    &:focus{
-		-moz-transform:rotate(-3deg);
-		-webkit-transform:rotate(-3deg);
-		-o-transform:rotate(-3deg);
-		-ms-transform:rotate(-3deg);
-	}
-}
-*/
-
 p.left {
   text-align: left;
 }
@@ -654,4 +642,55 @@ p.spaceless {
 
 .assinatura-preco {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.rotate{
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+     
+    overflow:hidden;
+ 
+    &:hover {
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }  
+}  
+
+.keyframes(@name; @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    animation: @arguments;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+.button-pagseguro {
+
+    .keyframes(shake {
+        0% { transform: rotate(0deg); }
+        80% { transform: rotate(0deg); }
+        85% { transform: rotate(5deg); }
+        95% { transform: rotate(-5deg); }
+        100% { transform: rotate(0deg); }
+    });
+
+    .animation(shake 2.0s)
 }
