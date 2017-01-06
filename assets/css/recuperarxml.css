@@ -194,6 +194,24 @@ a:focus {
     padding: 100px 0;
   }
 }
+.numbers-section {
+  background: url(../img/office.jpg) no-repeat bottom center scroll;
+  background-color: #E6E6FA;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-filter: blur(5px) brightness(50%);
+  -moz-filter: blur(5px) brightness(50%);
+  -o-filter: blur(5px) brightness(50%);
+  -ms-filter: blur(5px) brightness(50%);
+  filter: blur(5px) brightness(50%);
+}
+@media (min-width: 768px) {
+  .numbers-section {
+    padding: 100px 0;
+  }
+}
 .fale-section {
   background-color: #E6E6FA;
   background-size: cover;
