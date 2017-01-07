@@ -195,17 +195,13 @@ a:focus {
   }
 }
 .numbers-section {
+  color: #FFFFFF;
   background: url(../img/office.jpg) no-repeat bottom center scroll;
   background-color: #E6E6FA;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  -webkit-filter: blur(5px) brightness(50%);
-  -moz-filter: blur(5px) brightness(50%);
-  -o-filter: blur(5px) brightness(50%);
-  -ms-filter: blur(5px) brightness(50%);
-  filter: blur(5px) brightness(50%);
 }
 @media (min-width: 768px) {
   .numbers-section {
@@ -457,10 +453,10 @@ p.spaceless {
   padding-bottom: 2em;
 }
 .plano:hover {
-  background: #dedede;
+  background: #bab6b6;
 }
 .plano h3 {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.8em;
   background: #2e7bcf;
   text-align: center;
@@ -521,10 +517,10 @@ p.spaceless {
   padding-bottom: 2em;
 }
 .numeros:hover {
-  background: #dedede;
+  background: #bab6b6;
 }
 .numeros h4 {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.2em;
   background: #2e7bcf;
   text-align: center;
@@ -541,14 +537,14 @@ p.spaceless {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .assinatura {
-  background: #dedede;
+  background: #bab6b6;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
 }
 .assinatura h3 {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.8em;
   background: #2e7bcf;
   text-align: center;
@@ -653,4 +649,9 @@ p.spaceless {
   100% {
     transform: rotate(0deg);
   }
+}
+.email {
+  border: 0;
+  box-shadow: none;
+  font-size: 1.20em;
 }

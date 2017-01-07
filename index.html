@@ -37,7 +37,7 @@
 
 	<script>
 		$(document).ready(function() {
-		  var bgArray = ['intro.jpg', 'intro3.jpg'];
+		  var bgArray = ['intro2.jpg', 'intro3.jpg'];
 		  var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
 		  var path = 'assets/img/';
 		  var imageUrl = path + bg;
@@ -491,8 +491,7 @@
               <br /><br />
               
               <p>
-                E-mail: 
-                <input id="link" readonly="readonly" value="recuperarxml@gmail.com">
+                <input id="link" class="email" readonly="readonly" value="recuperarxml@gmail.com"><br />
                 <button id="myHint" class="copiar-email" data-hint="Copiar e-mail" data-clipboard-target="#link">
                   Copiar!
                 </button>              
@@ -537,9 +536,6 @@
           Todos os direitos reservados.
         </p>
 
-        <!--<p>
-          Feito com <i class="fa fa-heart" aria-hidden="true" style="color:red"></i> em Cuiabá - Mato Grosso - Brasil
-       	</p>-->
       </div>
     </footer>
 

@@ -5,7 +5,7 @@
 @colorBlueLight: #ABCBE5;
 @colorBackgroundBlue: #2e7bcf;
 @colorIce: #E6E6FA;
-@colorGray: #555;
+@colorGray: #bab6b6;
 @ponto-de-quebra: 768px;
 
 html {
@@ -225,18 +225,13 @@ a {
 }
 
 .numbers-section {
+    color: @colorWhite;
     background: url(../img/office.jpg) no-repeat bottom center scroll;
     background-color: @colorIce;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-
-    -webkit-filter: blur(5px) brightness(50%);
-    -moz-filter: blur(5px) brightness(50%);
-    -o-filter: blur(5px) brightness(50%);
-    -ms-filter: blur(5px) brightness(50%);
-    filter: blur(5px) brightness(50%);    
 
     @media(min-width:@ponto-de-quebra) {
         padding: 100px 0;
@@ -521,11 +516,11 @@ p.spaceless {
   padding-bottom: 2em;
 
   &:hover {
-    background: #dedede;
+    background: @colorGray;
   }
   
   h3 {
-    color: #fff;
+    color: @colorWhite;
     font-size: 1.8em;
     background: @colorBackgroundBlue;
     text-align: center;
@@ -591,18 +586,18 @@ p.spaceless {
 }
 
 .numeros {
-  background: #FFFFFF;
+  background: @colorWhite;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
   
   &:hover {
-    background: #dedede;
+    background: @colorGray;
   }
 
   h4 {
-    color: #fff;
+    color: @colorWhite;
     font-size: 1.2em;
     background: #2e7bcf;
     text-align: center;
@@ -623,14 +618,14 @@ p.spaceless {
 }
 
 .assinatura {
-  background: #dedede;
+  background: @colorGray;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em;
   
   h3 {
-    color: #fff;
+    color: @colorWhite;
     font-size: 1.8em;
     background: @colorBackgroundBlue;
     text-align: center;
@@ -712,4 +707,10 @@ p.spaceless {
     });
 
     .animation(shake 2.0s)
+}
+
+.email {
+    border: 0;
+    box-shadow: none;
+    font-size: 1.20em;
 }
