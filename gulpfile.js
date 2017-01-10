@@ -8,9 +8,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
-    //jshint = require('gulp-jshint'),
-    //jshintStylish = require('jshint-stylish'),
-    //csslint = require('gulp-csslint');
 
 // delete ./dist
 gulp.task('clearDist', function() {
@@ -73,17 +70,9 @@ gulp.task('minImages', ['minCSS'], function() {
 gulp.task('rx', ['minImages'], function() {
 
     gulp.src('*.ico')
-        .pipe(gulp.dest('dist'));
-    gulp.src('assets/css/fonts/*.{eot,svg,ttf,woff}')
-        .pipe(gulp.dest('dist/assets/css/fonts'));
-    gulp.src('assets/css/less/*.less')
-        .pipe(gulp.dest('dist/assets/css/less'));
-    gulp.src('assets/css/font-awesome-4.1.0/fonts/*.{otf,eot,svg,ttf,woff}')
-        .pipe(gulp.dest('dist/assets/css/font-awesome-4.1.0/fonts'));
-    gulp.src('assets/css/font-awesome-4.1.0/less/*.less')
-        .pipe(gulp.dest('dist/assets/css/font-awesome-4.1.0/less'));
-    gulp.src('assets/css/font-awesome-4.1.0/css/*.css')
-        .pipe(cssnano()).pipe(gulp.dest('dist/assets/css/font-awesome-4.1.0/css'));
+        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/assinatura'))
+        .pipe(gulp.dest('dist/boleto'))
 });
 
 // Browser Sync
@@ -96,8 +85,7 @@ gulp.task('server', function() {
   gulp.watch(['index.html', 
               'assinatura/index.html',
               'boleto/index.html',
-              'assets/js/**/*.js', 
-              'assets/css/**/*.less']).on('change', reload);
+              'assets/js/**/*.js']).on('change', reload);
 
 
   gulp.watch('assets/js/**/*.js').on('change', function(event) {
