@@ -292,7 +292,7 @@
             <div class="col-sm-4 wow fadeInDown text-center">
               <img class="rotate" src="./assets/img/retina.svg" alt="">
                <h3>Faz</h3>
-               <p class="lead">Faz a liberação imediata após o envio do comprovante de pagamento do boleto bancário.</p>
+               <p class="lead">Faz a liberação imediata com pagamento do boleto bancário após o envio do comprovante.</p>
             </div>
                     
           </div>
@@ -302,7 +302,7 @@
             <div class="col-sm-4 wow fadeInDown text-center">
               <img class="rotate" src="./assets/img/retina.svg" alt="">
                <h3>Faz</h3>
-               <p class="lead">Faz o download ilimitado de XML para os planos pagos.</p>
+               <p class="lead">Faz o download ilimitado de XML para o plano pago.</p>
             </div>
 
             <div class="col-sm-4 wow fadeInDown text-center">
@@ -331,7 +331,7 @@
             <div class="col-sm-4 wow fadeInDown text-center">
               <img class="rotate" src="./assets/img/beats.svg" alt="">
                <h3>Não faz</h3>
-               <p class="lead">Não fazemos a emissão das faturas de pagamento, clique no botão do PagSeguro abaixo para gerá-las.</p>
+               <p class="lead">Não fazemos a emissão das faturas de pagamento, clique no botão do PagSeguro abaixo para gerar seu boleto ou pagamento com cartão de crédito.</p>
             </div>
 
             <div class="col-sm-4 wow fadeInDown text-center">
@@ -385,50 +385,80 @@
       <div class="faq-section">
         <div class="container">
           <div class="col-lg-8 col-lg-offset-2">
+
             <h1 class="brand-heading">PLANOS</h1>
             <br /><br />
 
-            <div class="plano">
-              <h3>Mensal</h3>
-              <div class="plano-preco">R$ 49</div>
-                <ul class="itens-plano">
-                  <li><h4>1 único mês</h4></li>
-                  <li>Boleto ou Cartão de crédito</li>
-                  <li>Compra com PagSeguro<span class="icone-check"></span></li>
-                  <li>R$ 1,00 emissão do boleto<span class="icone-check"></span></li>
-                  <li>Licença por computador<span class="icone-check"></span></li>
-                  <li>Liberação imediata<span class="icone-check"></span></li>
-                  <li></li>
-                </ul>
-                
-                <div class="button-pagseguro">
-					       <form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
-					       <input type="hidden" name="code" value="4A7A7F0F3333A27BB4786FAFC827D921" />
-					       <input type="hidden" name="iot" value="button" />
-					       <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
-					       </form>
-				        </div>
+          <div class="row"> 
+            
+            <div class="col-sm-4 text-center">
+              <div class="plano">
+                <h3>Grátis</h3>
+                <div class="plano-preco">5 arquivos</div>
+                  <ul class="itens-plano">
+                    <li><h4>durante 1 mês</h4></li>
+                    <li>Sem cartão de crédito<span class="icone-check"></span></li>
+                    <li>Sem cadastro<span class="icone-check"></span></li>
+                    <li>Sem pegadinha<span class="icone-check"></span></li>
+                    <li>Licença por computador<span class="icone-check"></span></li>
+                    <li>Liberação imediata<span class="icone-check"></span></li>
+                    <li></li>
+                  </ul>
+
+                  <div class="button-pagseguro">
+                    <a class="page-scroll" href="#download" title="Download do instalador">
+                      <input type="image" src="./assets/img/down209x48.png" name="submit" width="48" alt="Download" title="Download do instalador" />
+                    </a>
+                  </div>
+
+              </div>
             </div>
 
-            <div class="plano">
-              <h3>Assinatura</h3>
-              <div class="plano-preco">R$ 49</div>
-                <ul class="itens-plano">
-                  <li><h4>3, 6 ou 12 meses</h4></li>
-                  <li>Somente Cartão de crédito</li>
-                  <li>Compra com PagSeguro<span class="icone-check"></span></li>
-                  <li>Sem taxa do boleto<span class="icone-check"></span></li>
-                  <li>Licença por computador<span class="icone-check"></span></li>
-                  <li>Liberação imediata<span class="icone-check"></span></li>
-                  <li></li>
-                </ul>
+            <div class="col-sm-4 text-center">
+              <div class="plano">
+                <h3>Mensal</h3>
+                <div class="plano-preco">R$ 49</div>
+                  <ul class="itens-plano">
+                    <li><h4>1 único mês</h4></li>
+                    <li>Boleto ou Cartão de crédito</li>
+                    <li>Compra com PagSeguro<span class="icone-check"></span></li>
+                    <li>R$ 1,00 emissão do boleto<span class="icone-check"></span></li>
+                    <li>Licença por computador<span class="icone-check"></span></li>
+                    <li>Liberação imediata<span class="icone-check"></span></li>
+                    <li></li>
+                  </ul>
+                  
+                  <div class="button-pagseguro">
+  					       <form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="post">
+  					       <input type="hidden" name="code" value="4A7A7F0F3333A27BB4786FAFC827D921" />
+  					       <input type="hidden" name="iot" value="button" />
+  					       <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+  					       </form>
+  				        </div>
+              </div>
+            </div>
 
-                <div class="button-pagseguro">
-					       <form target="pagseguro1" action="http://www.recuperarxml.com.br/assinatura" method="post">
-					       <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
-					       </form>
-				        </div>
+            <div class="col-sm-4 text-center">
+              <div class="plano">
+                <h3>Assinatura</h3>
+                <div class="plano-preco">R$ 49</div>
+                  <ul class="itens-plano">
+                    <li><h4>3, 6 ou 12 meses</h4></li>
+                    <li>Somente Cartão de crédito</li>
+                    <li>Compra com PagSeguro<span class="icone-check"></span></li>
+                    <li>Sem taxa do boleto<span class="icone-check"></span></li>
+                    <li>Licença por computador<span class="icone-check"></span></li>
+                    <li>Liberação imediata<span class="icone-check"></span></li>
+                    <li></li>
+                  </ul>
 
+                  <div class="button-pagseguro">
+  					       <form target="pagseguro1" action="http://www.recuperarxml.com.br/assinatura" method="post">
+  					       <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/209x48-assinar-azul-assina.gif" name="submit" width="210" alt="Pague com PagSeguro" title="Clique neste botão para realizar o pagamento" />
+  					       </form>
+  				        </div>
+
+                </div>
               </div>
             </div>
 
