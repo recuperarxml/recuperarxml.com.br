@@ -8,18 +8,25 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
+    ftp = require('vinyl-ftp');
 
 // delete ./dist
 gulp.task('clearDist', function() {
-    return gulp.src('dist')
-               .pipe(clean());
+    return gulp.src('www')
+               .pipe(clean())
+               .pipe(browserSync.reload({
+                    stream: true
+                }))
 });
 
 // compile LESS
 gulp.task('compileLESS', ['clearDist'], function() {
     return gulp.src('assets/css/recuperarxml.less')
                .pipe(less())
-               .pipe(gulp.dest('assets/css'));
+               .pipe(gulp.dest('assets/css'))
+               .pipe(browserSync.reload({
+                    stream: true
+                }))
 });
 
 // min html
@@ -28,51 +35,63 @@ gulp.task('minHTML', ['compileLESS'], function() {
               'google9593787cc7c11ddd.html'
              ])
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('www'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // min assinaturas
 gulp.task('minAssinatura', ['minHTML'], function() {
     return gulp.src(['assinatura/index.html'])
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist/assinatura'));
+        .pipe(gulp.dest('www/assinatura'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // min boleto
 gulp.task('minBoleto', ['minAssinatura'], function() {
     return gulp.src(['boleto/index.html'])
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist/boleto'));
+        .pipe(gulp.dest('www/boleto'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // min js
 gulp.task('minJS', ['minBoleto'], function() {
     return gulp.src(['assets/js/**/*.js'])
         .pipe(uglify())
-        .pipe(gulp.dest('dist/assets/js'));              
+        .pipe(gulp.dest('www/assets/js'))              
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
         
 // min css
 gulp.task('minCSS', ['minJS'], function() {
     return gulp.src('assets/css/*.css')
         .pipe(cssnano())
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('www/assets/css'));
 });
 
 // min images
 gulp.task('minImages', ['minCSS'], function() {
     return gulp.src('assets/img/**/*')
         //.pipe(imagemin())
-        .pipe(gulp.dest('dist/assets/img'));
+        .pipe(gulp.dest('www/assets/img'));
 });
 
 // copy others
 gulp.task('rx', ['minImages'], function() {
 
     gulp.src('*.ico')
-        .pipe(gulp.dest('dist'))
-        .pipe(gulp.dest('dist/assinatura'))
-        .pipe(gulp.dest('dist/boleto'))
+        .pipe(gulp.dest('www'))
+        .pipe(gulp.dest('www/assinatura'))
+        .pipe(gulp.dest('www/boleto'))
 });
 
 // Browser Sync
@@ -103,6 +122,37 @@ gulp.task('server', function() {
   });      
 });
 
+gulp.task('deploy', function () {
+
+    var conn = ftp.create( {
+        host: '',
+        user: '',
+        password: '',
+        parallel: 3,
+        log: gutil.log
+    } );
+
+    var globs = [
+        'www/index.html',
+		'www/favicon.ico',
+		'www/sitemap.xml',
+		'www/google9593787cc7c11ddd.html',
+		'www/boleto/favicon.ico',
+        'www/boleto/index.html',
+		'www/assinatura/favicon.ico',
+        'www/assinatura/index.html',
+        'www/assets/css/**',
+        'www/assets/js/**',
+		'www/assets/img/**'
+    ];
+
+    gulp.src( globs, { base: '.', 
+                       buffer: false } )
+        .pipe( conn.newer(''))
+        .pipe( conn.dest(''))
+
+} );
+
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(['index.html', 
@@ -110,7 +160,6 @@ gulp.task('watch', function() {
               'boleto/index.html',
               'assets/js/**/*.js', 
               'assets/css/**/*.less'], ['rx']);
-
 });
 
 // Default task

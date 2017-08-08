@@ -1,7 +1,7 @@
 
 About
 -------
-   * https://www.recuperarxml.com.br
+   * http://www.recuperarxml.com.br
    * https://github.com/recuperarxml/recuperarxml.com.br/wiki
 
 Prerequisitos:
